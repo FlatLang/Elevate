@@ -44,16 +44,11 @@ class {
 
   public static class ElevateGlobal {
     external type NodeWindowsType
-    private static var NodeWindowsType _nodeWindows
-    visible static NodeWindowsType nodeWindows {
+    visible static lazy NodeWindowsType nodeWindows {
       get {
         external {
-          if (!#{_nodeWindows}) {
-            #{_nodeWindows} = require('node-windows');
-          }
+          return require('node-windows');
         }
-
-        return _nodeWindows
       }
     }
   }

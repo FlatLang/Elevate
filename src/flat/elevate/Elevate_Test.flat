@@ -3,9 +3,9 @@ package flat/elevate
 import flat/elevate/Elevate
 
 testable class {
-  test `can create`() {
-    let value = Elevate()
+    test `can create`() {
+        let value = Elevate()
 
-    expect(value).toNotBe(null)
-  }
+        expect(value).toNotBe(null)
+    }
 }
